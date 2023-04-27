@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description></description>
+    <groupId>6a38e9c6-0187-1000-1f69-f397c0cc0801</groupId>
+    <name>ExecuteStreamCommand-Read CSV file</name>
+    <snippet>
+        <connections>
+            <id>254ef40c-4e30-331e-0000-000000000000</id>
+            <parentGroupId>3297af64-81e9-3091-0000-000000000000</parentGroupId>
+            <versionedComponentId>254ef40c-4e30-331e-82cf-fee498bff848</versionedComponentId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>3297af64-81e9-3091-0000-000000000000</groupId>
+                <id>cac9a737-6ef7-39a3-0000-000000000000</id>
+                <type>FUNNEL</type>
+                <versionedComponentId>cac9a737-6ef7-39a3-937c-c5d1f15b223b</versionedComponentId>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>nonzero status</selectedRelationships>
+            <selectedRelationships>original</selectedRelationships>
+            <selectedRelationships>output stream</selectedRelationships>
+            <source>
+                <groupId>3297af64-81e9-3091-0000-000000000000</groupId>
+                <id>846c2d14-4700-3f5a-0000-000000000000</id>
+                <type>PROCESSOR</type>
+                <versionedComponentId>846c2d14-4700-3f5a-aec7-c5513c77d795</versionedComponentId>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <funnels>
+            <id>cac9a737-6ef7-39a3-0000-000000000000</id>
+            <parentGroupId>3297af64-81e9-3091-0000-000000000000</parentGroupId>
+            <position>
+                <x>600.0</x>
+                <y>0.0</y>
+            </position>
+            <versionedComponentId>cac9a737-6ef7-39a3-937c-c5d1f15b223b</versionedComponentId>
+        </funnels>
+        <processors>
+            <id>846c2d14-4700-3f5a-0000-000000000000</id>
+            <parentGroupId>3297af64-81e9-3091-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>224.0</y>
+            </position>
+            <versionedComponentId>846c2d14-4700-3f5a-aec7-c5513c77d795</versionedComponentId>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.20.0</version>
+            </bundle>
+            <config>
+                <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>argumentsStrategy</key>
+                        <value>
+                            <name>argumentsStrategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Command Arguments</key>
+                        <value>
+                            <name>Command Arguments</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Command Path</key>
+                        <value>
+                            <name>Command Path</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Ignore STDIN</key>
+                        <value>
+                            <name>Ignore STDIN</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Working Directory</key>
+                        <value>
+                            <name>Working Directory</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Argument Delimiter</key>
+                        <value>
+                            <name>Argument Delimiter</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Output Destination Attribute</key>
+                        <value>
+                            <name>Output Destination Attribute</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Max Attribute Length</key>
+                        <value>
+                            <name>Max Attribute Length</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>argumentsStrategy</key>
+                        <value>Command Arguments Property</value>
+                    </entry>
+                    <entry>
+                        <key>Command Arguments</key>
+                        <value>Employee_id;Employee_name;Age</value>
+                    </entry>
+                    <entry>
+                        <key>Command Path</key>
+                        <value>C:\Users\XN474SX\OneDrive - EY\Documents\NIFI\pythonscript\pyhtoncsv.py</value>
+                    </entry>
+                    <entry>
+                        <key>Ignore STDIN</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Working Directory</key>
+                    </entry>
+                    <entry>
+                        <key>Argument Delimiter</key>
+                        <value>;</value>
+                    </entry>
+                    <entry>
+                        <key>Output Destination Attribute</key>
+                    </entry>
+                    <entry>
+                        <key>Max Attribute Length</key>
+                        <value>256</value>
+                    </entry>
+                </properties>
+                <retryCount>10</retryCount>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>ExecuteStreamCommand</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>nonzero status</name>
+                <retry>false</retry>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>original</name>
+                <retry>false</retry>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>output stream</name>
+                <retry>false</retry>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+        </processors>
+    </snippet>
+    <timestamp>04/27/2023 14:00:57 UTC</timestamp>
+</template>
